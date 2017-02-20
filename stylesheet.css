@@ -34,13 +34,8 @@ html {
 }
 
 .news-header{
-    padding-top: 50px;
+    padding-top: 40%;
     color: white;
-}
-
-.otsikko {
-    position: relative;
-    max-width: 100%;
 }
 
 .headertext {
@@ -49,12 +44,6 @@ html {
    margin-top: 80px; 
    left: 20px; 
    width: 100%;
-}
-
-.picture {
-    width: 100%;
-    height: 100%;
-    padding-top: 62px;
 }
 
 .navigation li {
@@ -93,7 +82,8 @@ html {
     position: relative;
     padding-bottom: 56.25%;
     padding-top: 25px;
-    height: 0;
+    padding-left: 25%;
+    height: 50%;
 }
 
 .video-container iframe{
@@ -120,11 +110,29 @@ html {
     color: darkred
 }
 
-@media screen and (max-width: 500px){
-    .blog-post {
-        width: 100%;
+@media screen and (min-width: 1000px){
+    .video-container iframe{
+        width: 70%;
+        height: 70%;
+        align-items: center;
+        }
     }
-    .navigation {
-        
+
+@media screen and (max-width: 500px){
+    .navigation ul {
+        height: 125px;
+        background-color: black;
+    }
+    
+    .navigation a {
+        text-decoration: none    
+    }
+    
+    .navigation li {
+        display: flex
+    }
+    #main-header {
+        color: antiquewhite;
+        margin-top: 45%;
     }
 }
