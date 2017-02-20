@@ -1,0 +1,130 @@
+.navigation {
+    background-color: black;
+    text-align: center;
+    font-family: 'Barrio', cursive;
+    position: absolute;
+    height: 58px;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 999;
+    color: black;
+}
+
+footer{
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    font-family: 'Barrio', cursive;
+    background-color: lightyellow;
+    margin: -8px;
+}
+
+html { 
+    background-image: url("http://www.caravanpiste.fi/userData/turun-caravanpiste-f287a/pictures/solar_energy_panels.jpg");
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
+#main-header {
+    margin-top: 100px;
+    margin-left: 50%;
+    font-family: 'Barrio', cursive;
+}
+
+.news-header{
+    padding-top: 50px;
+    color: white;
+}
+
+.otsikko {
+    position: relative;
+    max-width: 100%;
+}
+
+.headertext {
+   position: absolute;
+   font-family: 'Barrio', cursive;
+   margin-top: 80px; 
+   left: 20px; 
+   width: 100%;
+}
+
+.picture {
+    width: 100%;
+    height: 100%;
+    padding-top: 62px;
+}
+
+.navigation li {
+    padding-top: 0px;
+    padding-bottom: 10px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.navigation ul {
+    height:50px;
+}
+
+.navigation a {
+    text-decoration: overline;
+    color: #fff;
+}
+
+.navigation a:hover{
+    color: darkred
+}
+
+.artikkeli{
+    width: 97%;
+    min-height: 100%;
+    margin-top: 10px;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    background-color: black;
+    opacity: 0.9;
+}
+
+.video-container {
+    align-content: center;
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    height: 0;
+}
+
+.video-container iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#etusivu, #news, #ajankohtaista {
+    color: #ff0000
+}
+
+#etusivu:hover{
+    color: darkred
+}
+
+#news:hover{
+    color: darkred
+} 
+
+#ajankohtaista:hover{
+    color: darkred
+}
+
+@media screen and (max-width: 500px){
+    .blog-post {
+        width: 100%;
+    }
+    .navigation {
+        
+    }
+}
