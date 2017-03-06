@@ -13,7 +13,7 @@ $.getJSON("https://lygdmaj1.firebaseio.com/.json", function(data) {
 var loopNews = setInterval(function(){
 $("#teksti").html(choose());
 $("#teksti").html(current).hide().fadeIn(1000);
-    }, 1000)
+    }, 7000)
 
 
 window.onload = getContent();
@@ -24,7 +24,7 @@ function playpause(){
     loopNews = setInterval(function(){
         $("#teksti").html(choose());
         $("#teksti").html(current).hide().fadeIn(1000);
-    }, 1000);
+    }, 7000);
     setVisibleButton();
     } else {
     clearInterval(loopNews);
