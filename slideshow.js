@@ -1,6 +1,7 @@
 {
 var dataInfo = null;
 var hidden = true;
+var playing = true;
 
 function getContent(){
 $.getJSON("https://lygdmaj1.firebaseio.com/.json", function(data) {
@@ -12,38 +13,41 @@ $.getJSON("https://lygdmaj1.firebaseio.com/.json", function(data) {
 var loopNews = setInterval(function(){
 $("#teksti").html(choose());
 $("#teksti").html(current).hide().fadeIn(1000);
-    }, 10000)
+    }, 1000)
 
 
 window.onload = getContent();
 
 
-function stop(){
-    clearInterval(loopNews);
-    setVisibleButton();
-}
-
-function play(){
+function playpause(){
+    if(!playing){
     loopNews = setInterval(function(){
         $("#teksti").html(choose());
         $("#teksti").html(current).hide().fadeIn(1000);
-    }, 10000);
+    }, 1000);
     setVisibleButton();
+    } else {
+    clearInterval(loopNews);
+    setVisibleButton();
+    }
+    playing = !playing;
 }
 
 function next(){
     clearInterval(loopNews);
-    $(".result").html(choose());
+    $("#teksti").html(choose());
     hidden = true;
     setVisibleButton();
+    playing = false;
 }
 
 function previous(){
     clearInterval(loopNews);
-    $(".result").html(choose());
-    $(".result").html(choose());
+    $("#teksti").html(choose());
+    $("#teksti").html(choose());
     hidden = true;
     setVisibleButton();
+    playing = false;
 }
 
 var current = localStorage.getItem("lastseen");
@@ -65,17 +69,11 @@ function choose() {
     return current;
 }
 
-window.onload=function(){
-  document.getElementById("play").style.visibility="hidden";
-}
-
 function setVisibleButton(){
     if(hidden){
-    document.getElementById("pause").style.visibility="hidden";
-    document.getElementById("play").style.visibility="visible";
+    document.getElementById("pause").textContent="Play";
     } else {
-    document.getElementById("play").style.visibility="hidden";
-    document.getElementById("pause").style.visibility="visible";
+    document.getElementById("pause").textContent="Pause";
     }
     hidden = !hidden;
 }
