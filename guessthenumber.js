@@ -10,7 +10,7 @@ var numberToBeGuessed = getRandomInteger(1, 10);
 
 function guessTheNumber(){
     var input = parseInt(document.getElementById("number").value);
-    if(input >= 1 && input <= 10){
+    if(input >= 1 && input <= 10 && (input/1 == input)){
         if(compareNumbers(numberToBeGuessed, input)){
             alert("you win!");
         } else {

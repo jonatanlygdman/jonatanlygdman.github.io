@@ -1,0 +1,25 @@
+{
+    "uutiset": [
+
+        {
+            "otsikko": "Uutinen #1",
+            "sisältö": "Ihmisiä, jotka paahtavat täysillä ja joilla on sisäinen hehku päällä, on paljon. Harmi, että he ovat valtaosin alle 7-vuotiaita.",
+            "päivämäärä": "1.3"
+            },
+        {
+            "otsikko": "Tärkee uutinen #2",
+            "sisältö": "Minun sukupolveni huomattavin löytö on se, että ihmiset voivat muuttaa koko elämänsä muuttamalla asenteensa.",
+            "päivämäärä": "2.3"
+            },
+
+
+        {
+            "otsikko": "Tärkein uutinen #3",
+            "sisältö": "Voittajat eivät koskaan luovuta, eivätkä luovuttajat koskaan voita.",
+            "päivämäärä": "3.3"
+            }
+
+
+        ]
+
+}

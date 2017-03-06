@@ -11,6 +11,10 @@
     color: black;
 }
 
+.result {
+    color: white
+}
+
 footer{
     bottom: 0;
     position: absolute;
@@ -34,7 +38,7 @@ html {
 }
 
 .news-header{
-    padding-top: 40%;
+    padding-top: 50px;
     color: white;
 }
 
@@ -108,6 +112,10 @@ html {
 
 #ajankohtaista:hover{
     color: darkred
+}
+
+.result{
+    height: 300px;
 }
 
 @media screen and (min-width: 1000px){
