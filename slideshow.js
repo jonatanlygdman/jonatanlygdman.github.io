@@ -1,8 +1,9 @@
+{
 var dataInfo = null;
 var hidden = true;
 
 function getContent(){
-$.getJSON("http://lygdmaj1.firebaseio.com/.json", function(data) {
+$.getJSON("https://lygdmaj1.firebaseio.com/.json", function(data) {
     console.log(data);
     dataInfo = data;
 });
@@ -78,7 +79,7 @@ function setVisibleButton(){
     }
     hidden = !hidden;
 }
-
+}
 /*TODO
 fix delay
 */
