@@ -2,7 +2,7 @@ var dataInfo = null;
 var hidden = true;
 
 function getContent(){
-$.getJSON("https://lygdmaj1.firebaseio.com/.json", function(data) {
+$.getJSON("http://lygdmaj1.firebaseio.com/.json", function(data) {
     console.log(data);
     dataInfo = data;
 });
