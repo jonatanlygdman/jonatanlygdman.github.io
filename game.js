@@ -24,6 +24,7 @@ var ctx = canvas.getContext("2d");
     var playerWidth = 20;
     var playerSpeed = 5;
     var score = 0;
+    var gameOver = false;
 
 function drawPlayer() {
     ctx.beginPath();
@@ -127,7 +128,7 @@ function drawEnemy() {
   
 function drawScore() {
     ctx.font = "16px Arial";
-    ctx.fillStyle = "#0095DD";
+    ctx.fillStyle = "#000";
     ctx.fillText("Score: "+score, 8, 20);
 };
 
@@ -136,9 +137,15 @@ function draw() {
     setInterval(drawPlayer, 10);
     setInterval(drawEnemy, 10);
     setInterval(drawScore, 10);
-    
-    };
+};
     
 draw();
 
+function gameOver() {
+    ctx.font = "16px Arial";
+    ctx.fillStyle = "#000";
+    ctx.fillText("Score: "+score, 200, 200);
+    gameOver = true;
+};
+    
 };
