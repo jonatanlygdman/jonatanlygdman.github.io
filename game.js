@@ -1,3 +1,4 @@
+var score = 0;
 function loadCanvas() {
 
 var canvas = document.getElementById("gameCanvas");
@@ -23,7 +24,6 @@ var ctx = canvas.getContext("2d");
     var playerHeight = 20;
     var playerWidth = 20;
     var playerSpeed = 5;
-    var score = 0;
     var gameOver = false;
 
 function drawPlayer() {
@@ -146,6 +146,9 @@ function gameOver() {
     ctx.fillStyle = "#000";
     ctx.fillText("Score: "+score, 200, 200);
     gameOver = true;
+    };
 };
-    
+
+function submit_score() {
+    window.parent.postMessage(score, "*");
 };
