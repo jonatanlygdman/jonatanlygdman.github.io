@@ -1,0 +1,225 @@
+<html>
+    <head>
+        <title>Recycled paper imports and exports</title>
+        <link rel="stylesheet" type="text/css" href="stylesheet.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Hello there, welcome!</h1>
+        <h3>Let's explore the numbers. Start by selecting what you want to explore.</h3>
+        <select id="target">
+            <option value="">Select what you want to explore...</option>
+            <option value="world_map">World Map</option>
+            <option value="numbers_table">Numbers</option>
+            <option value="containers_table">Containers</option>
+            <option value="newspapers_table">Area</option>
+        </select>
+            <script>
+            document
+                .getElementById('target')
+                .addEventListener('change', function () {
+                    'use strict';
+                    var vis = document.querySelector('.vis'),   
+                        target = document.getElementById(this.value);
+                    if (vis !== null) {
+                        vis.className = 'inv';
+                    }
+                    if (target !== null ) {
+                        target.className = 'vis';
+                    }
+            });
+            </script>
+        
+        <div id="world_map" class="inv">
+            <h1>Export and import of recycled paper, tons (2018)</h1>
+            <h3>From and to CEPI countries (marked red on the map)</h3>
+            <img id="worldmap" src="wold_map_final.png">
+        </div>
+        
+        
+        <div class="my_info">
+        <div id="numbers_table" class="inv">
+            <h3>Only want to look at the numbers?</h3>
+            <h4>Here you go:</h4>
+            <table>
+                <tr>
+                    <th>Area</th>
+                    <th>Color on map</th>
+                    <th>Export (tons)</th>
+                    <th>Import (tons)</th>
+                </tr>
+                <tr>
+                    <th>Rest of Europe</th>
+                    <th>Green</th>
+                    <th>979</th>
+                    <th>1634</th>
+                </tr>
+                <tr>
+                    <th>Asia</th>
+                    <th>Yellow</th>
+                    <th>8802</th>
+                    <th>5</th>
+                </tr>
+                <tr>
+                    <th>North America</th>
+                    <th>Grey</th>
+                    <th>5</th>
+                    <th>390</th>
+                </tr>
+                <tr>
+                    <th>Latin America</th>
+                    <th>Purple</th>
+                    <th>32</th>
+                    <th>18</th>
+                </tr>
+                <tr>
+                    <th>Rest of World</th>
+                    <th>Blue</th>
+                    <th>154</th>
+                    <th>21</th>
+                </tr>
+            </table>
+        </div>
+        <div id="containers_table" class="inv">
+            <h3>One large shipping contaner can hold 26.5 tons of cargo</h3>
+            <h4>Amount of containers that is needed to ship the amount of paper yearly:</h4>
+            <table>
+                <tr>
+                    <th>Area</th>
+                    <th>Export</th>
+                    <th>Import</th>
+                </tr>
+                <tr>
+                    <th>Rest of Europe</th>
+                    <th class="europe_export">
+                    <script>
+                    var html = "";
+                    for(i = 0; i < 37; i++) {
+                        html = html + "<img src='Shipping-Container.jpg'>";
+                    }
+                    $(".europe_export").append(html);
+                    </script>    
+                    </th>
+                    <th class="europe_import">
+                    <script>
+                    var html = "";
+                    for(i = 0; i < 62; i++) {
+                        html = html + "<img src='Shipping-Container.jpg'>";
+                    }
+                    $(".europe_import").append(html);
+                    </script>
+                    </th>
+                </tr>
+                <tr>
+                    <th>Asia</th>
+                    <th class="asia_export">
+                    <script>
+                    var html = "";
+                    for(i = 0; i < 332; i++) {
+                        html = html + "<img src='Shipping-Container.jpg'>";
+                    }
+                    $(".asia_export").append(html);
+                    </script>
+                    </th>
+                    <th class="asia_import">
+                    <img src="Shipping-Container-fifth.jpg">
+                    </th>
+                </tr>
+                <tr>
+                    <th>North America</th>
+                    <th class="north_america_export">
+                        <img src="Shipping-Container-fifth.jpg">
+                    </th>
+                    <th class="north_america_import">
+                    <script>
+                    var html = "";
+                    for(i = 0; i < 15; i++) {
+                        html = html + "<img src='Shipping-Container.jpg'>";
+                    }
+                    $(".north_america_import").append(html);
+                    </script>
+                    </th>
+                </tr>
+                <tr>
+                    <th>Latin America</th>
+                    <th>
+                        <img src="Shipping-Container.jpg">
+                    </th>
+                    <th>
+                        <img src="Shipping-Container.jpg">
+                    </th>
+                </tr>
+                <tr>
+                    <th>Rest of World</th>
+                    <th class="row_export">
+                    <script>
+                    var html = "";
+                    for(i = 0; i < 6; i++) {
+                        html = html + "<img src='Shipping-Container.jpg'>";
+                    }
+                    $(".row_export").append(html);
+                    </script>
+                    </th>
+                    <th>
+                        <img src="Shipping-Container-fifth.jpg">
+                    </th>
+                </tr>
+            </table>
+            
+        </div>
+        <div id="newspapers_table" class="inv">
+            <h3>Newspaper weighs about 50 grams per square meter (One ton of newspaper can cover 0.02 square kilometers)</h3>
+            <h4>Area that could be covered by the recycled export and import paper:</h4>
+            <table>
+                <tr>
+                    <th>Area</th>
+                    <th>Comparison</th>
+                    <th>Export (sq. km)</th>
+                    <th>Import (sq. km)</th>
+                </tr>
+                <tr>
+                    <th>Rest of Europe (Manhattan area 59.1 sq. km)</th>
+                    <th>
+                        <img src="manhattan_comparison.png">
+                    </th>
+                    <th>19.58</th>
+                    <th>32.68</th>
+                </tr>
+                <tr>
+                    <th>Asia (Liechtenstein area 160 sq. km)</th>
+                    <th>
+                        <img src="liechtenstein_comparison.png">
+                    </th>
+                    <th>176.04</th>
+                    <th>0.1</th>
+                </tr>
+                <tr>
+                    <th>North America (Lauttasaari area 3.85 sq. km)</th>
+                    <th>
+                        <img src="Laru_comparison.png">
+                    </th>
+                    <th>0.1</th>
+                    <th>7.8</th>
+                </tr>
+                <tr>
+                    <th>Latin America (Vatican City area 0.44 sq. km)</th>
+                    <th>
+                        <img src="vatican-city-map_comparison.png">
+                    </th>
+                    <th>0.64</th>
+                    <th>0.36</th>
+                </tr>
+                <tr>
+                    <th>Rest of World (Monaco area 2.02 sq. km)</th>
+                    <th>
+                        <img src="monaco-map-comparison.png">
+                    </th>
+                    <th>3.08</th>
+                    <th>0.42</th>
+                </tr>
+            </table>
+        </div>
+        </div>
+    </body>
+</html>
