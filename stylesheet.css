@@ -52,3 +52,23 @@ select {
     padding: 10px;
     background-color: #fafafa;
 }
+
+#grey {
+    background-color: rgb(174, 174, 174);
+}
+
+#purple {
+    background-color: rgb(184, 118, 208);
+}
+
+#green {
+    background-color: rgb(132, 200, 132);
+}
+
+#blue {
+    background-color: rgb(123, 173, 197);
+}
+
+#yellow {
+    background-color: rgb(238, 218, 101);
+}
